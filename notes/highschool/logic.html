@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logic</title>
+    <link rel="stylesheet" href="../../style/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <a href="../../index.html">Back</a>
+    <h1>Logic</h1>
+    <hr />
+    <p>ประพจน์</p>
+    <ul>
+      <li>ประโยคหรือข้อความที่เป็นจริง (T) หรือเท็จ (F) อย่างใดอย่างหนึ่ง</li>
+    </ul>
+    <p>การเชื่อมประพจน์</p>
+    <table>
+      <tr>
+        <th colspan="2">ประพจน์ย่อย</th>
+        <th>นิเสธ</th>
+        <th>และ</th>
+        <th>หรือ</th>
+        <th>ถ้า...แล้ว...</th>
+        <th>ก็ต่อเมื่อ</th>
+      </tr>
+      <tr>
+        <th>p</th>
+        <th>q</th>
+        <th>~p</th>
+        <th>p &#8743 q</th>
+        <th>p &#8744 q</th>
+        <th>p &#8594 q</th>
+        <th>p &#8596 q</th>
+      </tr>
+      <tr>
+        <td>T</td>
+        <td>T</td>
+        <td>F</td>
+        <td>T</td>
+        <td>T</td>
+        <td>T</td>
+        <td>T</td>
+      </tr>
+      <tr>
+        <td>T</td>
+        <td>F</td>
+        <td>F</td>
+        <td>F</td>
+        <td>T</td>
+        <td>F</td>
+        <td>F</td>
+      </tr>
+      <tr>
+        <td>F</td>
+        <td>T</td>
+        <td>T</td>
+        <td>F</td>
+        <td>T</td>
+        <td>T</td>
+        <td>F</td>
+      </tr>
+      <tr>
+        <td>F</td>
+        <td>F</td>
+        <td>T</td>
+        <td>F</td>
+        <td>F</td>
+        <td>T</td>
+        <td>T</td>
+      </tr>
+    </table>
+    <p>สมมูล</p>
+    <ul>
+        <li>ประพจน์ที่สมมูลกันคือ ประพจน์สองรูปแบบที่มีค่าความจริงตรงกันทุกกรณี</li>
+        <li>~(~p) &nbsp &#8801 &nbsp p</li>
+        <li>p &#8743 q &nbsp &#8801 &nbsp q &#8743 p</li>
+        <li>p &#8744 q &nbsp &#8801 &nbsp q &#8744 p</li>
+        <li>p &#8596 q &nbsp &#8801 &nbsp q &#8596 p</li>
+        <li>p &#8594 q &nbsp ไม่มีสมบัติการสลับที่ ***</li>
+        <li>p &#8743 (q &#8744 r) &nbsp &#8801 &nbsp (p &#8743 q) &#8744 (p &#8743 r)</li>
+        <li>p &#8744 (q &#8743 r) &nbsp &#8801 &nbsp (p &#8744 q) &#8743 (p &#8744 r)</li>
+        <li>p &#8594 q &nbsp &#8801 &nbsp ~p &#8744 q &nbsp &#8801 &nbsp ~q &#8594 ~p &nbsp (*** ออกบ่อย)</li>
+        <li>p &#8596 q &nbsp &#8801 &nbsp (p &#8594 q) &#8743 (q &#8594 p)</li>
+        <li>p &#8596 q &nbsp &#8801 &nbsp ~p &#8596 ~q</li>
+        <li>~(p &#8596 q) &nbsp &#8801 &nbsp ~p &#8596 q &nbsp &#8801 &nbsp p &#8596 ~q</li>
+        <li>~(p &#8743 q) &nbsp &#8801 &nbsp ~p &#8744 ~q</li>
+        <li>~(p &#8744 q) &nbsp &#8801 &nbsp ~p &#8743 ~q</li>
+    </ul>
+    <p>สัจนิรันดร์</p>
+    <ul>
+        <li>รูปแบบของประพจน์ที่มีค่าความจริงเป็นจริงทุกกรณี</li>
+        <li>ให้แทนทั้งก้อนป็นเท็จ ถ้าไม่ขัดแย้ง (เป็นเท็จได้) ไม่เป็นสัจนิรันดร์</li>
+        <li>ให้แทนทั้งก้อนป็นเท็จ ถ้าขัดแย้ง (ไม่ยอมเป็นเท็จ) เป็นสัจนิรันดร์</li>
+    </ul>
+    <p>การอ้างเหตุผล</p>
+    <ul>
+        <li>เหตุ (p<sup class="sub">1</sup>, p<sup class="sub">2</sup>, p<sup class="sub">3</sup>, ..., p<sup class="sub">n</sup>) และ ผล (C)</li>
+        <li>(p<sup class="sub">1</sup> &#8743 p<sup class="sub">2</sup> &#8743 p<sup class="sub">3</sup> &#8743 ... &#8743 p<sup class="sub">n</sup>) &#8594 C</li>
+        <li>สมเหตุสมผล (valid) ก็ต่อเมื่อ แทนเป็นเท็จแล้วขัดแย้ง (เหมือนสัจนิรันดร์)</li>
+        <li>ไม่สมเหตุสมผล (invalid) ก็ต่อเมื่อ แทนเป็นเท็จแล้วไม่ขัดแย้ง (เหมือนสัจนิรันดร์)</li>
+    </ul>
+    <p>ตัวบ่งปริมาณ</p>
+    <ul>
+        <li>ประโยคเปิด คือ ประโยคบอกเล่าหรือปฏิเสธที่มีตัวแปร ซึ่งจะไม่ทราบค่าความจริงจนกว่าจะแทนค่าลงในตัวแปร</li>
+        <li>x + 2 &#8805 9 เป็นประโยคเปิดที่มี x เป็นตัวแปร</li>
+        <li>เขาเป็นติวเตอร์ เป็นประโยคเปิดที่มี เขา เป็นตัวแปร</li>
+        <li>ตัวบ่งปริมาณ &#8704 (for all)</li>
+        <li>&#8704x แทน สำหรับ x ทุกตัว</li>
+        <li>ตัวบ่งปริมาณ &#8707 (for some)</li>
+        <li>&#8707x แทน สำหรับ x บางตัว</li>
+        <li>P(x) แทน ประโยคเปิด และ <i>U</i> เป็นเอกภพสัมพัทธ์</li>
+        <li>&#8704x [P(x)] เป็นจริงเมื่อ แทน x ทุกตัวแล้วเป็นจริง</li>
+        <li>&#8704x [P(x)] เป็นเท็จเมื่อ แทน x แล้วมีอย่างน้อย 1 ตัวเป็นเท็จ</li>
+        <li>&#8707x [P(x)] เป็นจริงเมื่อ แทน x แล้วมีอย่างน้อย 1 ตัวเป็นจริง</li>
+        <li>&#8707x [P(x)] เป็นเท็จเมื่อ แทน x ทุกตัวแล้วเป็นเท็จ</li>
+    </ul>
+  </body>
+</html>
