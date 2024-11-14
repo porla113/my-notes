@@ -21,6 +21,10 @@ td {
   text-align: center;
 }
 
+.hilight {
+  color: blueviolet;
+}
+
 .super {
   vertical-align: super;
   font-size: small;
