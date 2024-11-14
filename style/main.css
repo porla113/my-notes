@@ -34,3 +34,11 @@ td {
   vertical-align: sub;
   font-size: medium;
 }
+
+.idiom-div {
+  padding-top: 20px;
+}
+
+.explain-div {
+  color: gray;
+}
