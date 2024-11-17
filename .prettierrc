@@ -2,6 +2,6 @@
   "tabWIdth": 4,
   "singleAttributePerLine": false,
   "bracketSameLine": true,
-  "proseWrap": "preserve",
+  "proseWrap": "never",
   "arrowParens": "avoid"
 }
