@@ -4,4 +4,5 @@
   "bracketSameLine": true,
   "proseWrap": "never",
   "arrowParens": "avoid"
+  "printWidth": 1000
 }
