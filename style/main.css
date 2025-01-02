@@ -44,10 +44,15 @@ td {
   text-align: center;
 }
 
+.main-topic {
+  color: darkcyan;
+}
+
 .hilight {
   color: blueviolet;
 }
 
+/* replace with MathJax */
 .super {
   vertical-align: super;
   font-size: small;
